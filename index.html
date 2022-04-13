@@ -10,3 +10,65 @@
     <link rel="stylesheet" href="main.css">
     <title>Aulão-Git</title>
 </head>
+
+<body>
+
+    <div class="container-fluid header">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div style=" display: flex; align-items: center;justify-content: center; ">
+
+        <div class="container row" id="container">
+            <form id="formulario" method="post">
+                <h2 align="center">Gerador de Senhas</h2>
+                <div class="align-items-center ">
+                    <label>Força:</label>
+                    <br>
+                    <input class=" form-check-input mt-0" type="radio" name="force" id="weak" value="26" checked>
+                    <label for="weak">Fraco</label>
+                    <br>
+
+                    <input class="form-check-input mt-0" type="radio" name="force" id="average" value="62">
+                    <label for="average">Médio</label>
+                    <br>
+
+                    <input class="form-check-input mt-0" type="radio" name="force" id="strong" value="90">
+                    <label for="strong">Forte</label>
+                    <br><br>
+
+                    <label for="size">Tamanho: </label><span id="span" style="text-align: center;"></span>
+                    <br>
+
+                    <input class="form-range" type="range" name="size" id="size" min="4" max="100" style="width: 100%;">
+                    <br>
+
+                    <div align="center">
+                        <input class="btn btn-success botoes" type="button" value="Gerar Senha"
+                            onclick="GenerateDiv();Generate();">
+                    </div>
+                </div>
+                <div align="center" id="generateDiv"></div>
+            </form>
+            <div class="align-items-center" style="text-align: center; margin-bottom: 25px;">
+                <br>
+                <p>Fraco: Contém apenas letras minúsculas.</p>
+                <p>Médio: Contém letras minúsculas, maiúsculas e números.</p>
+                <p>Forte: Contém letras minúsculas, maiúsculas, números e símbolos.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
